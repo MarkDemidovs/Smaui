@@ -1,11 +1,16 @@
 # smaui
-A WIP Desktop app framework. Full name: VirsmaUi
-Built on SDL2, REQUIRES SDL2 To be installed.
+A Work In Progress Framework (or as commonly known for now: Toolkit [1]) for creating CrossPlatform desktop software using "Widgets".
 
-Linux command for building: 
+# Build Information
+As per testing on Linux, It uses a custom Makefile, ran by using "make" in the root of the project.
+By building the source files, it gets outputted in the "builds" folder, where youll find your ./app outputted file. (TBU - To Be Updated)
+For the build to work, it must see the main.cpp file and any other files marked with the c++ extension under the "tools" folder, which holds all source code (Not written by the user).
+SDL2 MUST be installed on your system, and as of now, the framework [1] has only been tested on Linux (specifically Arch way-land based systems.)
 
-[mark@archlinux smaui]$ g++ main.cpp -o app `sdl2-config --cflags --libs`
-[mark@archlinux smaui]$ ./app
+# Coding Information
+For any user coding their own software using the framework [1], the code written must go into "main.cpp". It follows a simple while loop which acts as the main update loop. Check the file itself for more information.
+
+
 
 # Roadmap
 This is basically a roadmap of features To Be Implemented.
@@ -18,6 +23,8 @@ This is basically a roadmap of features To Be Implemented.
 3. Panel (basic container to group widgets, with background color)
 
 4. Text Input / Textbox (single-line user text entry)
+
+- Setting repository to be public
 
 5. Checkbox (toggleable on/off box)
 
