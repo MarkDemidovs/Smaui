@@ -16,8 +16,7 @@ public:
     void clear(unsigned char r, unsigned char g, unsigned char b, unsigned char a);
 
     // Show the drawn content
-    void present();
-
+    void update();
 private:
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;

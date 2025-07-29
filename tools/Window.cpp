@@ -52,6 +52,6 @@ void Window::clear(unsigned char r, unsigned char g, unsigned char b, unsigned c
     SDL_RenderClear(renderer);
 }
 
-void Window::present() {
+void Window::update() {
     SDL_RenderPresent(renderer);
 }
