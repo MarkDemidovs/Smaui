@@ -4,7 +4,7 @@ CXXFLAGS = -std=c++17 `sdl2-config --cflags`
 LDFLAGS = `sdl2-config --libs` -lSDL2_ttf
 
 # Files and directories
-SRC = main.cpp tools/Window.cpp tools/widgets/label/Label.cpp tools/widgets/button/Button.cpp tools/widgets/panel/Panel.cpp
+SRC = main.cpp tools/Window.cpp tools/widgets/label/Label.cpp tools/widgets/button/Button.cpp tools/widgets/panel/Panel.cpp tools/widgets/textbox/Textbox.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET_DIR = builds
 TARGET = $(TARGET_DIR)/app

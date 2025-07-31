@@ -27,7 +27,7 @@ This is basically a roadmap of features To Be Implemented.
 
 3. ~~Panel (basic container to group widgets, with background color and positioning with widgets)~~ (Version 0.4)
 
-4. Text Input / Textbox (single-line user text entry)
+4. ~~Text Input / Textbox (single-line user text entry)~~ (Version 0.5)
 
 - Setting repository to be public
 
