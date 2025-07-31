@@ -19,9 +19,9 @@ All fonts, default pictures and everything regarding looks are stored under tool
 # Roadmap
 This is basically a roadmap of features To Be Implemented.
 
-0. ``Basic Windows (Version 0.1)
+0. ~~Basic Windows~~ (Version 0.1)
 
-1. ``Label (static text display) (Version 0.2 + Version 0.2.1 - Colors)
+1. ~~Label (static text display)~~ (Version 0.2 + Version 0.2.1 - Colors)
 
 2. Button (clickable, with hover and pressed states)
 
