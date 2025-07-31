@@ -1,118 +1,114 @@
 # SmaUI
-A cross-platform C++ desktop software development framework built on SDL2.
-Minimal, extendable, highly-performative and very simple for users of TKinter and wxWidgets.
-
+A cross-platform C++ desktop framework powered by SDL2.
+Minimal. Performant. Fun.
 <img src="./banner.png" width="300px">
 
-SmaUI uses the power of SDL2 and C++ to allow users to create blazing-fast software for Windows, Linux and MacOS. Currently, SmaUI is in beta-development, which means that most of the features haven't been completed. 
+SmaUI uses the power of SDL2 and C++ to help developers create blazing-fast desktop apps for Windows, Linux, and macOS. Currently in Beta 1.0, SmaUI already includes powerful core widgets and a familiar syntax inspired by Tkinter and wxWidgets—but with real performance.
 
-Inspiration has been taken from TKinters syntax to enable easy prototyping and development, giving any user the ability to create software in record times in C++. 
-
-Here is a simple example of a minimal counter.
+Ideal for:
+✅ Prototyping GUIs in C++
+✅ Learning how GUIs work under the hood
+✅ Building lightning-fast native apps
+<hr>
+🧪 Quick Example: A Minimal Counter App
 
 <img src="./example.png" width="500px">
 
-See? Wasn't that hard!
+Simplicity, performance, and clarity—all in just a few lines.
 
-Any user is free to create their own custom style, but by default a simple style is included for any prototyping needs.
-Please refer to main.cpp for a view at the process! We will see you there.
+🎨 Styles Included
 
-## Setup
-To setup SmaUI you must have: SDL2, SDL2_TTF and SDL2_IMAGES installed. So far the process has been tested on Linux.
+SmaUI supports stylesheets using folders of PNG assets. A default style is included for prototyping. You can also load your own via:
 
+```C++
+Style* buttonStyle = loadStyle(renderer, "tools/creative/ui/button");
+```
+
+# 🔧 Setup
+
+Requires:
+    SDL2
+    SDL2_ttf
+    SDL2_image
+
+Tested on Linux. Works on Windows and MacOS.
+
+Run:
 ```bash
-git clone git@github.com:MarkDemidovs/Smaui.git
+git clone https://github.com/MarkDemidovs/Smaui.git
 cd smaui
 make
 ./builds/app
 ```
-You should see a basic counter application running.
-Here is how it should look:
-<img src="./counter.png" width="400px>
 
-Please check out tools/tests to see various widgets and their usage, but as a basis all widgets must be imported from "./tools/widgets/WIDGET NAME HERE./WIDGET NAME HERE.h"  
+You should see the basic counter app.
+<img src="./counter.png" width="400px">
 
-# You are ready to go!
+See main.cpp and tools/tests/ for more examples!
+## 📦 Widgets Available
 
-## Roadmap
-This framework is on version 1.0 beta, and currently this is the roadmap for upcoming updates, this can change:
+    ✅ Window
 
-0. ~~Basic Windows~~ (Version 0.1)
+    ✅ Label
 
-1. ~~Label (static text display)~~ (Version 0.2 + Version 0.2.1 - Colors)
+    ✅ Button (with hover/pressed effects)
 
-2. ~~Button (clickable, with hover and pressed states)~~ (Version 0.3 + Version 0.3.1 - changeText())
+    ✅ Panel (for grouping widgets)
 
-3. ~~Panel (basic container to group widgets, with background color and positioning with widgets)~~ (Version 0.4)
+    ✅ Textbox (text input, single-line)
 
-4. ~~Text Input / Textbox (single-line user text entry)~~ (Version 0.5)
+Each widget is imported from:
 
-- Setting repository to be public <- We're here! ->
+'#include "./tools/widgets/WIDGET_NAME/WIDGET_NAME.h"'
 
-5. Checkbox (toggleable on/off box)
+## 🚧 Roadmap — Beta 1.0 and Beyond
 
-6. Radio Button Group (select one option from many)
+✔ = Complete   ✎ = In Progress   ☐ = Planned
 
-7. Slider (drag to select value on a range)
+Feature	Status
+Basic Window	✔
+Label	✔
+Button	✔
+Panel	✔
+Textbox (Single-line)	✔
+Checkbox	✎
+Radio Button Group	☐
+Slider	☐
+Scrollbar	☐
+Tooltip	☐
+Image / Icon Widget	☐
+Dropdown / Combo Box	☐
+Multiline Textbox	☐
+List View	☐
+Tab Control	☐
+Progress Bar	☐
+Menu Bar	☐
+Modal / Popup Dialog	☐
+Tree View	☐
+Table View	☐
+Canvas / Custom Draw Widget	☐
+Split Pane / Resizable Panels	☐
+Drag & Drop Support	☐
+Animations & Transitions	☐
+Keyboard Navigation	☐
+Accessibility	☐
+High DPI Support	☐
+Full Window Controls	☐
+Custom Title Bars & Borders	☐
+Multi-Window Support	☐
+Transparency / Layering	☐
+Snap / Dock Support	☐
+Runtime Theming / Skin Switching	☐
+Persistent Window State	☐
+Multi-Monitor & DPI Awareness	☐
+OpenGL Rendering Support	☐
+Custom Style Language / HTML UI	☐
 
-8. Scrollbar (vertical or horizontal scroll control)
+## 💬 Questions or Issues?
 
-9. Tooltip (hover text info popup)
+Open an issue here on GitHub, or contact me:
 
-10. Image / Icon Widget (display images or icons)
+📨 Twitter / X: @markdemidovs
+⭐️ Thanks for Visiting!
 
-11. Dropdown / Combo Box (select from a dropdown list)
-
-12. Multiline Textbox / Text Area (larger, scrollable text input)
-
-13. List View / Listbox (scrollable list of items, selectable)
-
-14. Tab Control (tabs to switch between panels)
-
-15. Progress Bar (visual progress indicator)
-
-16. Menu Bar (top window menu with dropdown items)
-
-17. Popup / Modal Dialog (floating window for alerts, confirmation)
-
-18. Tree View (expandable hierarchical list)
-
-19. Grid / Table View (multi-column data display)
-
-20. Canvas / Drawing Area (custom paint/draw widget)
-
-21. Split Pane / Resizable Panes (adjustable sub-window areas)
-
-22. Drag and Drop Support (drag widgets or data between areas)
-
-23. Animations and Transitions (smooth UI effects on widgets)
-
-24. Focus Management and Keyboard Navigation (tab key, arrows)
-
-25. Accessibility Support (screen readers, high contrast modes)
-
-26. High DPI / Retina Display Support (sharp, scaled UI)
-
-27. Window Features: Resizing, Minimizing, Maximizing, Fullscreen
-
-28. Window Decorations (Custom Title Bar and Borders)
-
-29. Multiple Window Support (popup windows, dialogs, multi-doc)
-
-30. Window Transparency and Layering (Alpha blending)
-
-31. Drag Window by Custom Title Bar (click-and-drag to move)
-
-32. Window Snap and Docking Features
-
-33. Window Theming / Skinning (dynamic style change at runtime)
-
-34. Window State Persistence (save/restore size, position)
-
-35. Multi-Monitor Support and DPI Awareness
-
-## Anything else?
-Please open an issue if you have any questions, or issues! 
-If you want to, you can shoot me over a message on X/twitter at @markdemidovs !
-
-### Thank you for visiting our repo!
+We’re just getting started—get involved, fork the project, or just build something cool with SmaUI.
