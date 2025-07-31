@@ -1,6 +1,6 @@
 #include "Window.h"
 #include "./Widget.h"  // include Widget base class
-
+#include <SDL2/SDL_image.h>
 #include <iostream>
 
 Window::Window(const std::string& title, int width, int height) {
@@ -59,7 +59,14 @@ void Window::clear(unsigned char r, unsigned char g, unsigned char b, unsigned c
 }
 
 void Window::update() {
-    // Draw widgets
+    if (backgroundImage) {
+        // Draw the background image before widgets
+        SDL_RenderCopy(renderer, backgroundImage, nullptr, nullptr);
+    } else {
+        SDL_RenderClear(renderer);
+    }
+
+    // Draw widgets on top of background
     for (auto& widget : widgets) {
         widget->draw(renderer);
     }
@@ -73,4 +80,25 @@ void Window::addWidget(std::shared_ptr<Widget> widget) {
 
 SDL_Renderer* Window::getRenderer() const {
     return renderer;
+}
+
+
+void Window::setBackground(const std::string& imagePath) {
+    if (backgroundImage) {
+        SDL_DestroyTexture(backgroundImage);
+        backgroundImage = nullptr;
+    }
+
+    SDL_Surface* surface = IMG_Load(imagePath.c_str());
+    if (!surface) {
+        std::cerr << "Failed to load background image: " << IMG_GetError() << std::endl;
+        return;
+    }
+
+    backgroundImage = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_FreeSurface(surface);
+
+    if (!backgroundImage) {
+        std::cerr << "Failed to create background texture: " << SDL_GetError() << std::endl;
+    }
 }

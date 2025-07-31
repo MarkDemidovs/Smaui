@@ -5,7 +5,7 @@
 
 TextBox::TextBox(int x, int y, int w, int h)
     : Widget(x, y, w, h), focused(false), text(""), bgColor{255, 255, 255, 255}, textColor{0, 0, 0, 255} {
-    font = TTF_OpenFont("./tools/creative/Arial.ttf", 18);
+    font = TTF_OpenFont("./tools/creative/Default.otf", 18);
     if (!font) {
         std::cerr << "Failed to load font: " << TTF_GetError() << std::endl;
     }

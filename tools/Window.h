@@ -29,9 +29,13 @@ public:
     // Get SDL_Renderer (for widgets to draw)
     SDL_Renderer* getRenderer() const;
 
+    // Changing background to an image
+    void setBackground(const std::string& imagePath);
+
 private:
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
+    SDL_Texture* backgroundImage = nullptr;
     bool isOpen = true;
 
     std::vector<std::shared_ptr<Widget>> widgets;  // store widgets

@@ -1,41 +1,23 @@
 # SmaUI
-A cross-platform C++ desktop software development framework built on SDL2.
-Minimal, extendable, highly-performative and very simple for users of TKinter and wxWidgets.
+A Work In Progress Framework (or as commonly known for now: Toolkit [1]) for creating CrossPlatform desktop software using "Widgets".
 
-<img src="./banner.png" width="300px">
+# Build Information
+As per testing on Linux, It uses a custom Makefile, ran by using "make" in the root of the project.
+By building the source files, it gets outputted in the "builds" folder, where youll find your ./app outputted file. (TBU - To Be Updated)
+For the build to work, it must see the main.cpp file and any other files marked with the c++ extension under the "tools" folder, which holds all source code (Not written by the user).
+SDL2 MUST be installed on your system, and as of now, the framework [1] has only been tested on Linux (specifically Arch way-land based systems.)
 
-SmaUI uses the power of SDL2 and C++ to allow users to create blazing-fast software for Windows, Linux and MacOS. Currently, SmaUI is in beta-development, which means that most of the features haven't been completed. 
+# Coding Information
+For any user coding their own software using the framework [1], the code written must go into "main.cpp". It follows a simple while loop which acts as the main update loop. Check the file itself for more information.
 
-Inspiration has been taken from TKinters syntax to enable easy prototyping and development, giving any user the ability to create software in record times in C++. 
+# Formatting Information
+All folders MUST be lowercase, and all source-code files (not written by the user) MUST be written starting with an upper case character.
 
-Here is a simple example of a minimal counter.
+# "Creative" Information
+All fonts, default pictures and everything regarding looks are stored under tool -> creative, like Arial.ttf, the default font.
 
-<img src="./example.png" width="500px">
-
-See? Wasn't that hard!
-
-Any user is free to create their own custom style, but by default a simple style is included for any prototyping needs.
-Please refer to main.cpp for a view at the process! We will see you there.
-
-## Setup
-To setup SmaUI you must have: SDL2, SDL2_TTF and SDL2_IMAGES installed. So far the process has been tested on Linux.
-
-```bash
-git clone git@github.com:MarkDemidovs/Smaui.git
-cd smaui
-make
-./builds/app
-```
-You should see a basic counter application running.
-Here is how it should look:
-<img src="./counter.png" width="400px>
-
-Please check out tools/tests to see various widgets and their usage, but as a basis all widgets must be imported from "./tools/widgets/WIDGET NAME HERE./WIDGET NAME HERE.h"  
-
-# You are ready to go!
-
-## Roadmap
-This framework is on version 1.0 beta, and currently this is the roadmap for upcoming updates, this can change:
+# Roadmap
+This is basically a roadmap of features To Be Implemented.
 
 0. ~~Basic Windows~~ (Version 0.1)
 
@@ -110,9 +92,3 @@ This framework is on version 1.0 beta, and currently this is the roadmap for upc
 34. Window State Persistence (save/restore size, position)
 
 35. Multi-Monitor Support and DPI Awareness
-
-## Anything else?
-Please open an issue if you have any questions, or issues! 
-If you want to, you can shoot me over a message on X/twitter at @markdemidovs !
-
-### Thank you for visiting our repo!
