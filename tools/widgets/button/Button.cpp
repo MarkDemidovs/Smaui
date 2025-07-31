@@ -84,3 +84,7 @@ void Button::handleEvent(const SDL_Event& e) {
         pressed = false;
     }
 }
+
+void Button::setText(const std::string& newText) {
+    label = newText;
+}

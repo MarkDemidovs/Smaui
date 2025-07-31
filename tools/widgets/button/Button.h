@@ -14,6 +14,7 @@ public:
 
     void setColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
     void onClick(std::function<void()> callback);
+    void setText(const std::string& label);
 
 private:
     std::string label;

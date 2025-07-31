@@ -13,10 +13,13 @@ int main() {
 
   auto button = std::make_shared<Button>(50, 150, 200, 50, "Click me!");
 
-    button->onClick([label]() {
+    button->onClick([label, button]() {
         std::cout << "Button clicked!\n";
+        label->setText("hello.");
+        button->setText("You clicked me.");
         label->setColor(255, 255, 0, 255);
     });
+
 
   window.addWidget(label);
   window.addWidget(label2);
@@ -24,6 +27,7 @@ int main() {
   window.addWidget(button);
 
   label->setColor(0,255,0,255);
+
 
   while (window.processEvents()) {
     window.clear(255, 0, 0, 255); // blue background
