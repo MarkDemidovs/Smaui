@@ -1,6 +1,7 @@
 # SmaUI
 A cross-platform C++ desktop framework powered by SDL2.
 Minimal. Performant. Fun.
+
 <img src="./banner.png" width="300px">
 
 SmaUI uses the power of SDL2 and C++ to help developers create blazing-fast desktop apps for Windows, Linux, and macOS. Currently in Beta 1.0, SmaUI already includes powerful core widgets and a familiar syntax inspired by Tkinter and wxWidgets—but with real performance.
@@ -10,7 +11,8 @@ Ideal for:
 ✅ Learning how GUIs work under the hood
 ✅ Building lightning-fast native apps
 <hr>
-🧪 Quick Example: A Minimal Counter App
+
+## 🧪 Quick Example: A Minimal Counter App
 
 <img src="./example.png" width="500px">
 
@@ -42,7 +44,8 @@ make
 ```
 
 You should see the basic counter app.
-<img src="./counter.png" width="400px">
+
+<img src="./counter.png" width="150px">
 
 See main.cpp and tools/tests/ for more examples!
 ## 📦 Widgets Available
@@ -58,51 +61,90 @@ See main.cpp and tools/tests/ for more examples!
     ✅ Textbox (text input, single-line)
 
 Each widget is imported from:
-
-'#include "./tools/widgets/WIDGET_NAME/WIDGET_NAME.h"'
+```C++
+#include "./tools/widgets/WIDGET_NAME/WIDGET_NAME.h"
+```
 
 ## 🚧 Roadmap — Beta 1.0 and Beyond
 
 ✔ = Complete   ✎ = In Progress   ☐ = Planned
 
-Feature	Status
+### Feature	Status 
+
 Basic Window	✔
+
 Label	✔
+
 Button	✔
+
 Panel	✔
+
 Textbox (Single-line)	✔
+
 Checkbox	✎
+
 Radio Button Group	☐
+
 Slider	☐
+
 Scrollbar	☐
+
 Tooltip	☐
+
 Image / Icon Widget	☐
+
 Dropdown / Combo Box	☐
+
 Multiline Textbox	☐
+
 List View	☐
+
 Tab Control	☐
+
 Progress Bar	☐
+
 Menu Bar	☐
+
 Modal / Popup Dialog	☐
+
 Tree View	☐
+
 Table View	☐
+
 Canvas / Custom Draw Widget	☐
+
 Split Pane / Resizable Panels	☐
-Drag & Drop Support	☐
+
 Animations & Transitions	☐
+
 Keyboard Navigation	☐
+
 Accessibility	☐
+
 High DPI Support	☐
+
 Full Window Controls	☐
+
 Custom Title Bars & Borders	☐
+
 Multi-Window Support	☐
+
 Transparency / Layering	☐
+
 Snap / Dock Support	☐
+
 Runtime Theming / Skin Switching	☐
+
 Persistent Window State	☐
+
 Multi-Monitor & DPI Awareness	☐
+
 OpenGL Rendering Support	☐
-Custom Style Language / HTML UI	☐
+
+Custom Style Language	☐
+
+HTML ☐
+
 
 ## 💬 Questions or Issues?
 
