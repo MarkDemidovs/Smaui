@@ -12,11 +12,20 @@ public:
 
     virtual void draw(SDL_Renderer* renderer) = 0;
 
-    // Handle SDL events, can be overridden by subclasses
     virtual void handleEvent(const SDL_Event& event) {}
 
+    // Position getters/setters
+    int getX() const { return x; }
+    int getY() const { return y; }
+    void moveTo(int newX, int newY) { x = newX; y = newY; }
+
+    // Size getters/setters
+    int getWidth() const { return width; }
+    int getHeight() const { return height; }
+    void resize(int newWidth, int newHeight) { width = newWidth; height = newHeight; }
+
 protected:
-    int x, y;       // position
+    int x, y;          // position
     int width, height; // size
 };
 
