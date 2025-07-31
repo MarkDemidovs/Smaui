@@ -14,8 +14,7 @@ Label::Label(int x, int y, int w, int h, const std::string& text)
 }
 
 void Label::draw(SDL_Renderer* renderer) {
-    // Draw simple white text on transparent background
-
+    
     TTF_Font* font = TTF_OpenFont("tools/creative/Arial.ttf", 24);
     if (!font) {
         std::cerr << "Failed to load font: " << TTF_GetError() << std::endl;
