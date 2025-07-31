@@ -15,11 +15,13 @@ All folders MUST be lowercase, and all source-code files (not written by the use
 
 # "Creative" Information
 All fonts, default pictures and everything regarding looks are stored under tool -> creative, like Arial.ttf, the default font.
+
 # Roadmap
 This is basically a roadmap of features To Be Implemented.
 
+0. ``Basic Windows (Version 0.1)
 
-1. Label (static text display)
+1. ``Label (static text display) (Version 0.2 + Version 0.2.1 - Colors)
 
 2. Button (clickable, with hover and pressed states)
 
