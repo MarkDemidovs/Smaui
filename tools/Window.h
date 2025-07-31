@@ -3,6 +3,11 @@
 
 #include <SDL2/SDL.h>
 #include <string>
+#include <vector>
+#include <memory>
+
+// Forward declare Widget
+class Widget;
 
 class Window {
 public:
@@ -17,10 +22,19 @@ public:
 
     // Show the drawn content
     void update();
+
+    // Add widget to the window
+    void addWidget(std::shared_ptr<Widget> widget);
+
+    // Get SDL_Renderer (for widgets to draw)
+    SDL_Renderer* getRenderer() const;
+
 private:
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
     bool isOpen = true;
+
+    std::vector<std::shared_ptr<Widget>> widgets;  // store widgets
 };
 
 #endif

@@ -1,38 +1,40 @@
 #include "Window.h"
+#include "./Widget.h"  // include Widget base class
+
 #include <iostream>
 
 Window::Window(const std::string& title, int width, int height) {
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         std::cerr << "SDL_Init Error: " << SDL_GetError() << "\n";
-        isOpen = false;
-        return;
+        exit(1);
     }
 
     window = SDL_CreateWindow(title.c_str(),
-        SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-        width, height, SDL_WINDOW_SHOWN);
+                              SDL_WINDOWPOS_CENTERED,
+                              SDL_WINDOWPOS_CENTERED,
+                              width, height,
+                              SDL_WINDOW_SHOWN);
+
     if (!window) {
         std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << "\n";
-        isOpen = false;
         SDL_Quit();
-        return;
+        exit(1);
     }
 
     renderer = SDL_CreateRenderer(window, -1,
-        SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+                                  SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
     if (!renderer) {
-        std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << "\n";
         SDL_DestroyWindow(window);
-        window = nullptr;
-        isOpen = false;
+        std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << "\n";
         SDL_Quit();
-        return;
+        exit(1);
     }
 }
 
 Window::~Window() {
-    if (renderer) SDL_DestroyRenderer(renderer);
-    if (window) SDL_DestroyWindow(window);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
     SDL_Quit();
 }
 
@@ -42,7 +44,11 @@ bool Window::processEvents() {
         if (event.type == SDL_QUIT) {
             isOpen = false;
         }
-        // TODO: Add widget event handling here later
+
+        // Forward event to widgets (we'll add this soon)
+        for (auto& widget : widgets) {
+            widget->handleEvent(event);
+        }
     }
     return isOpen;
 }
@@ -53,5 +59,18 @@ void Window::clear(unsigned char r, unsigned char g, unsigned char b, unsigned c
 }
 
 void Window::update() {
+    // Draw widgets
+    for (auto& widget : widgets) {
+        widget->draw(renderer);
+    }
+
     SDL_RenderPresent(renderer);
+}
+
+void Window::addWidget(std::shared_ptr<Widget> widget) {
+    widgets.push_back(widget);
+}
+
+SDL_Renderer* Window::getRenderer() const {
+    return renderer;
 }

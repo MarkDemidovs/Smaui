@@ -1,10 +1,10 @@
 # Compiler and flags
 CXX = g++
 CXXFLAGS = -std=c++17 `sdl2-config --cflags`
-LDFLAGS = `sdl2-config --libs`
+LDFLAGS = `sdl2-config --libs` -lSDL2_ttf
 
 # Files and directories
-SRC = main.cpp tools/Window.cpp
+SRC = main.cpp tools/Window.cpp tools/widgets/label/Label.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET_DIR = builds
 TARGET = $(TARGET_DIR)/app

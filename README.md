@@ -1,4 +1,4 @@
-# smaui
+# SmaUI
 A Work In Progress Framework (or as commonly known for now: Toolkit [1]) for creating CrossPlatform desktop software using "Widgets".
 
 # Build Information
@@ -10,8 +10,11 @@ SDL2 MUST be installed on your system, and as of now, the framework [1] has only
 # Coding Information
 For any user coding their own software using the framework [1], the code written must go into "main.cpp". It follows a simple while loop which acts as the main update loop. Check the file itself for more information.
 
+# Formatting Information
+All folders MUST be lowercase, and all source-code files (not written by the user) MUST be written starting with an upper case character.
 
-
+# "Creative" Information
+All fonts, default pictures and everything regarding looks are stored under tool -> creative, like Arial.ttf, the default font.
 # Roadmap
 This is basically a roadmap of features To Be Implemented.
 
