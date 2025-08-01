@@ -9,7 +9,7 @@
 int main() {
   int counter = 0;
   // Creating a window
-  Window window("Example", 400, 600);
+  Window window("Example Project", 400, 600);
 
   // Loading a style sheet (premade)
   Style *buttonStyle =

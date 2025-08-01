@@ -60,6 +60,8 @@ See main.cpp and tools/tests/ for more examples!
 
     ✅ Textbox (text input, single-line)
 
+    ✅ Checkbox
+
 Each widget is imported from:
 ```C++
 #include "./tools/widgets/WIDGET_NAME/WIDGET_NAME.h"
@@ -81,9 +83,9 @@ Panel	✔
 
 Textbox (Single-line)	✔
 
-Checkbox	✎
+Checkbox	✔
 
-Radio Button Group	☐
+Radio Button Group	✎
 
 Slider	☐
 
