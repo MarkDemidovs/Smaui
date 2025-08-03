@@ -27,7 +27,7 @@ int main() {
       std::make_shared<Button>(100, 400, 200, 60, "Decrement", buttonStyle);
 
   // Button click functionality [here must be all elements that are going to be
-  // used in the function]
+  // used in the function
   incBtn->onClick([label, incBtn, &counter]() {
     counter++;
     label->setText(std::to_string(counter));

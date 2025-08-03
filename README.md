@@ -62,6 +62,10 @@ See main.cpp and tools/tests/ for more examples!
 
     ✅ Checkbox
 
+    ✅ Radio Buttons and Grouping
+    
+
+
 Each widget is imported from:
 ```C++
 #include "./tools/widgets/WIDGET_NAME/WIDGET_NAME.h"
@@ -85,7 +89,7 @@ Textbox (Single-line)	✔
 
 Checkbox	✔
 
-Radio Button Group	✎
+Radio Button / Group	✔
 
 Slider	☐
 
