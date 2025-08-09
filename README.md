@@ -63,6 +63,8 @@ See main.cpp and tools/tests/ for more examples!
     ✅ Checkbox
 
     ✅ Radio Buttons and Grouping
+
+    ✅ Sliders
     
 
 
@@ -91,9 +93,9 @@ Checkbox	✔
 
 Radio Button / Group	✔
 
-Slider	☐
+Slider	✔
 
-Scrollbar	☐
+Scrollbar	✎
 
 Tooltip	☐
 

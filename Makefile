@@ -5,7 +5,7 @@ LDFLAGS = `sdl2-config --libs` -lSDL2_ttf -lSDL2_image
 
 
 # Files and directories
-SRC = main.cpp tools/Window.cpp tools/widgets/label/Label.cpp tools/widgets/button/Button.cpp tools/widgets/panel/Panel.cpp tools/widgets/textbox/Textbox.cpp tools/style/Style.cpp tools/widgets/checkbox/Checkbox.cpp tools/widgets/radio/RadioButton.cpp tools/widgets/radio/RadioButtonGroup.cpp
+SRC = main.cpp tools/Window.cpp tools/widgets/label/Label.cpp tools/widgets/button/Button.cpp tools/widgets/panel/Panel.cpp tools/widgets/textbox/Textbox.cpp tools/style/Style.cpp tools/widgets/checkbox/Checkbox.cpp tools/widgets/radio/RadioButton.cpp tools/widgets/radio/RadioButtonGroup.cpp tools/widgets/slider/Slider.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET_DIR = builds
 TARGET = $(TARGET_DIR)/app
